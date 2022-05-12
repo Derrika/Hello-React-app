@@ -3,24 +3,29 @@ import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './App';
 
-function Lake(props) {
-  return (
-      <h1>{props.name}</h1>
-  )
-}
+const lakelist = [
+  {id: "1", name: "Echo", trailhead: "Echo"},
+  {id: "2", name: "Maud", trailhead: "Wrights"},
+  {id: "3", name: "Velma", trailhead: "Bayview"}
+];
 
-function App() {
+//Structure
+function App({lakes}) {
   return (
     <div>
-      <Lake name="Lake Tahoe"/>
-      <Lake name="Angora Lake"/>
-      <Lake name="Shirley Lake"/>
+      {lakes.map(lake => (
+        <div>
+          <h2>{lake.name}</h2>
+          <p>Accesed by: {lake.trailhead}</p>
+        </div>
+      ))}
     </div>
   );
 }
 
+
 ReactDOM.render(
- <App/>,
+ <App lakes={lakelist}/>,
   document.getElementById('root')
 );
 

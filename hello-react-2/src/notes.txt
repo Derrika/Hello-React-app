@@ -59,3 +59,40 @@ ReactDOM.render(
  <App/>,
   document.getElementById('root')
 );
+
+//Accessing Data from a list
+
+const lakelist = [
+  "Lake Tahoe",
+  "Echo Lake",
+  "Maud Lake",
+  "Cascade Lake"
+];
+
+//Structure
+function App(props) {
+  return (
+    <ul>
+      {props.lakes.map(lake => (
+        <li>{lake}</li>
+      ))}
+    </ul>
+  );
+}
+
+//Destructure props
+function Apps({lakes}){
+  return (
+    <ul>
+      {lakes.map(lake => (
+        <li>{lake}</li>
+      ))}
+    </ul>
+  );
+}
+
+ReactDOM.render(
+ <Apps lakes={lakelist}/>,
+  document.getElementById('root')
+);
+
