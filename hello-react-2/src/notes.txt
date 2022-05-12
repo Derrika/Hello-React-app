@@ -18,3 +18,23 @@ let city = {
   name: "Madrid",
   country: "Spain",
 }; 
+
+/* function Hello({library, message, number}) {
+  //console.log(props);
+  return (
+    <div>
+      <h1>Welcome to {library}!</h1>
+      <p>{message}</p>
+      <p>{number} Props total</p>
+    </div>
+  )
+} */
+
+ReactDOM.render(
+  <Hello 
+  library="React" 
+  message="Add dynamic data!"
+  number={3}
+  />,
+   document.getElementById('root')
+ );
