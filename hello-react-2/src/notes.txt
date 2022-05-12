@@ -13,3 +13,8 @@
  <li>Steaks</li>
  <li>Sushi</li>
 </ul>,
+
+let city = {
+  name: "Madrid",
+  country: "Spain",
+}; 
