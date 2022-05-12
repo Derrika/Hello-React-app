@@ -3,42 +3,44 @@ import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './App';
 
-const lakelist = [
-  {id: "1", name: "Echo", trailhead: "Echo"},
-  {id: "2", name: "Maud", trailhead: "Wrights"},
-  {id: "3", name: "Velma", trailhead: "Bayview"}
-];
-
-const list = [1, 2, 3, 4, 5];
-
-//Structure
-function App({lakes}) {
+function Lake({name}){
   return (
     <div>
-      {lakes.map(lake => (
-        <div key = {lake.id}>
-          <h2>{lake.name}</h2>
-          <p>Accesed by: {lake.trailhead}</p>
-        </div>
-      ))}
+      <h1>Visit {name}!</h1>
     </div>
-  );
+  )
 }
 
-function Apps({ items }){
+function SkiResort({name}) {
   return (
-    <ul>
-      {items.map(item => (
-        <li key={item.toString()}>{item}</li>
-      ))}
-    
-    </ul>
-  );
+    <div>
+      <h1>Visit {name}!</h1>
+    </div>
+  )
 }
 
+
+function App(props) {
+  return (
+    <div>
+      {(props.season === "summer" ? (
+        <Lake name="Jenny Lake" /> 
+        ) : props.season === "winter" ? (
+          <SkiResort name="Jackson Hole Mountain Resort" />
+        ) : (
+          <h1>
+            Come back in the winter or summer!
+          </h1>
+        )
+      
+      )}
+    </div>
+  )
+ 
+}
 
 ReactDOM.render(
- <Apps items={list}/>,
+ <App season="fall"/>,
   document.getElementById('root')
 );
 
