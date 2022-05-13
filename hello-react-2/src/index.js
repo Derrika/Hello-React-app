@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
 
-function App({}){
+/* function App({}){
   const [year, setYear] = useState(2050);
   const [manager, setManager] = useState("Alex");
   const [status, setStatus] = useState("Open");
@@ -32,11 +32,32 @@ function App({}){
         </button>
       </div></>
   )
+} */
+
+
+function Checkbox() {
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    alert(`checked: ${checked.toString()}`);
+  });
+
+  return (
+    <>
+    <input 
+      type="checkbox" 
+      value={checked} 
+      onChange={() => 
+        setChecked(checked => !checked)
+      }
+    />
+    {checked ? "checked" : "not checked"}
+    </>
+  )
 }
 
-
 ReactDOM.render(
- <App />,
+ <Checkbox />,
   document.getElementById('root')
 );
 
