@@ -35,7 +35,7 @@ import './index.css';
 } */
 
 
-function Checkbox() {
+/* function Checkbox() {
   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
@@ -54,10 +54,75 @@ function Checkbox() {
     {checked ? "checked" : "not checked"}
     </>
   )
+} */
+
+/* useEffect 
+ function App() {
+  const [val, setVal] = useState("");
+  const [val2, setVal2] = useState("");
+
+  useEffect(() => {
+    console.log(`field 1: ${val}`);
+  }, [val]);
+
+  useEffect(() => {
+    console.log(`field 2: ${val2}`);
+  }, [val2]);
+
+  return (
+    <>
+      <br/>
+      <label>
+        Favourite Phrase:
+        <input type="text" value={val}
+        onChange={(e) => setVal(e.target.value)}
+        />
+      </label>
+      <br/>
+      <br />
+      <label>
+      Second Favourite Phrase:
+      <input type="text" value={val2}
+      onChange={(e) => setVal2(e.target.value)}
+      />
+    </label>
+    </>
+  )
+} */
+
+
+//Fetch Data
+function GitHubUser({login}) {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch(`https://api.github.com/users/${login}`)
+      .then(res => res.json())
+      .then(setData)
+      .catch(console.error);
+  }, []);
+
+/*   if(data) {
+    return <div>{JSON.stringify(data)}</div>
+  } */
+
+  if(data) {
+    return (
+      <div>
+        <h2>{data.login}</h2>
+        <img src={data.avatar_url} width={100}/>
+      </div>
+    )
+  }
+  return null;
+}
+
+function App() {
+  return <GitHubUser login="eveporcello" />
 }
 
 ReactDOM.render(
- <Checkbox />,
+ <App />,
   document.getElementById('root')
 );
 
