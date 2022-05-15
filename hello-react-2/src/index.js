@@ -1,10 +1,19 @@
 import React from 'react';
-//import React, {useState, useEffect, useReducer} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
 
+ReactDOM.render(
+ <App />,
+  document.getElementById('root')
+);
+
+
+
+
+
+//import React, {useState, useEffect, useReducer} from 'react';
 /* function App({}){
   const [year, setYear] = useState(2050);
   const [manager, setManager] = useState("Alex");
@@ -144,13 +153,6 @@ function Checkbox() {
     </>
   )
 } */
-
-
-
-ReactDOM.render(
- <App />,
-  document.getElementById('root')
-);
 
 
 
