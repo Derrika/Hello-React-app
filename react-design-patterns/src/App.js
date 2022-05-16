@@ -1,14 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-import {SplitScreen} from './SplitScreen';
+import { SplitScreen } from './SplitScreen';
 
 const LeftHandCompenent = () => {
-  return <h1>Left!</h1>
+  return <h1 style={{ backgroundColor: '#DAF7A6' }}>Left!</h1>
 }
 
 const RightHandComponent = () => {
-  return <h1>Right!</h1>
+  return <h1 style={{ backgroundColor: '#CCCCFF'}}>Right!</h1>
 }
 function App() {
   return (
