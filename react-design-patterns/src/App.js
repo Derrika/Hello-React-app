@@ -65,7 +65,18 @@ function App() {
         resourceName="person"
         itemComponent={LargePersonListItem}
       />
-          
+
+      <RegularList 
+        items={products}
+        resourceName="product"
+        itemComponent={SmallPersonListItem}
+      />
+      <RegularList 
+        items={products}
+        resourceName="product"
+        itemComponent={LargePersonListItem}
+      />
+            
        </>
     )
 }
