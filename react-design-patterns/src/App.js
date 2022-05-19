@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { RegularList } from './RegularList';
-import { SmallPersonListItem } from "./people/SmallPersonListItem";
+//import { RegularList } from './RegularList';
+//import { SmallPersonListItem } from "./people/SmallPersonListItem";
 import { LargePersonListItem } from './people/LargePersonListItem';
-import { SmallProductListItem } from './products/SmallProductListItem';
+//import { SmallProductListItem } from './products/SmallProductListItem';
 import { LargeProductListItem } from './products/LargeProductListItem';
-import { NumberedList } from './NumberedList';
+//import { NumberedList } from './NumberedList';
+import { Modal } from './Modal';
 
 //import { SplitScreen } from './SplitScreen';
 
@@ -55,7 +56,7 @@ const products = [
   }
 ];
 
-function App() {
+/* function App() {
     return (
        <>
        <RegularList 
@@ -82,7 +83,22 @@ function App() {
        </>
     )
 }
+ */
 
+function App() {
+    return (
+      <>
+        <br/>
+        <Modal>
+            <LargeProductListItem product={products[0]}/>
+        </Modal>
+        &nbsp;&nbsp;&nbsp;
+        <Modal>
+            <LargePersonListItem person={people[0]}/>
+        </Modal>
+      </>
+    )
+}
 
 
 export default App;
