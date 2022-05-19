@@ -8,8 +8,8 @@ let currentUser = {
     name: 'John Doe',
     age: 54,
     hairColor: 'Brown',
-    hobbies: ['swimming', 'bicycling', 'video game'];
-}
+    hobbies: ['swimming', 'bicycling', 'video game'],
+};
 
 let users = [{
 	name: 'John Doe',
