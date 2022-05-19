@@ -1,16 +1,35 @@
 import React from 'react';
 
-//import { RegularList } from './RegularList';
-//import { SmallPersonListItem } from "./people/SmallPersonListItem";
-import { LargePersonListItem } from './people/LargePersonListItem';
-//import { SmallProductListItem } from './products/SmallProductListItem';
-import { LargeProductListItem } from './products/LargeProductListItem';
-//import { NumberedList } from './NumberedList';
-import { Modal } from './Layout-Components/Modal';
 
-//import { SplitScreen } from './SplitScreen';
 
-const people = [
+function App() {
+
+    return (
+
+        <h1>Your code goes here</h1>
+    );
+
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* const people = [
   {
     name: 'John Doe',
     age: 54,
@@ -54,7 +73,7 @@ const products = [
     description: 'State-of-the-art technology for optimum',
     rating: 4.2,
   }
-];
+]; */
 
 /* function App() {
     return (
@@ -84,7 +103,7 @@ const products = [
     )
 }
  */
-
+/* 
 function App() {
     return (
       <>
@@ -98,11 +117,4 @@ function App() {
         </Modal>
       </>
     )
-}
-
-
-export default App;
-
-
-
-
+} */
