@@ -6,7 +6,7 @@ import { LargePersonListItem } from './people/LargePersonListItem';
 //import { SmallProductListItem } from './products/SmallProductListItem';
 import { LargeProductListItem } from './products/LargeProductListItem';
 //import { NumberedList } from './NumberedList';
-import { Modal } from './Modal';
+import { Modal } from './Layout-Components/Modal';
 
 //import { SplitScreen } from './SplitScreen';
 
