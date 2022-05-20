@@ -1,13 +1,16 @@
 import React from 'react';
 
-
+import {CurrentUserLoader} from './Container-Components/CurrentUserLoader';
+import {UserInfo} from './UserInfo';
 
 function App() {
 
     return (
         <>
-        <h1>Your code goes here</h1>
-        <p>schhool</p>
+          <CurrentUserLoader>
+              <UserInfo />
+          </CurrentUserLoader>
+        
         </>
     );
 
