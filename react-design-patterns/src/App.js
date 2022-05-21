@@ -1,23 +1,23 @@
 import React from 'react';
 
 //import {CurrentUserLoader} from './Container-Components/CurrentUserLoader';
-import { UserLoader } from './Container-Components/UserLoader';
+//import { UserLoader } from './Container-Components/UserLoader';
 import {UserInfo} from './UserInfo';
+import {ProductInfo} from './ProductInfo';
+import { DataSource } from './Container-Components/DataSource';
+import {ResourceLoader} from './Container-Components/ResoureLoader';
 
 
 function App() {
 
     return (
         <>
-          <UserLoader userId="123">
-              <UserInfo />
-          </UserLoader>
-          <UserLoader userId="234">
-              <UserInfo />
-          </UserLoader>
-          <UserLoader userId="345">
-              <UserInfo />
-          </UserLoader>
+         <ResourceLoader resourceUrl="/users/123" resourceName="user">
+            <UserInfo />
+         </ResourceLoader>
+         <ResourceLoader resourceUrl="/products/1234" resourceName="product">
+            <ProductInfo/>
+         </ResourceLoader>
             
         </>
     );
@@ -25,6 +25,16 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
 
 
 
