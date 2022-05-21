@@ -1,16 +1,24 @@
 import React from 'react';
 
-import {CurrentUserLoader} from './Container-Components/CurrentUserLoader';
+//import {CurrentUserLoader} from './Container-Components/CurrentUserLoader';
+import { UserLoader } from './Container-Components/UserLoader';
 import {UserInfo} from './UserInfo';
+
 
 function App() {
 
     return (
         <>
-          <CurrentUserLoader>
+          <UserLoader userId="123">
               <UserInfo />
-          </CurrentUserLoader>
-        
+          </UserLoader>
+          <UserLoader userId="234">
+              <UserInfo />
+          </UserLoader>
+          <UserLoader userId="345">
+              <UserInfo />
+          </UserLoader>
+            
         </>
     );
 

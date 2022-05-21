@@ -3,12 +3,13 @@ import React from 'react';
 
 
 export const UserInfo = ({ user }) => {
-    const {name, age, hairColor, hobbies} = user || {};
+    const {id, name, age, hairColor, hobbies} = user || {};
     
   
 
     return  user ? (
         <>
+         <p>{id}</p>
          <h3>{name}</h3>
          <p>Age: {age} years</p>
          <p>Hair Color: {hairColor}</p>
