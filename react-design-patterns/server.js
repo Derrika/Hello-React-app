@@ -50,14 +50,14 @@ app.get('/current-user', (req, res) => {
 });
 
 app.get('/users/:id', (req, res) => {
-	const { id } = req.params;
+	const {id} = req.params;
 
 	res.json(users.find(user => user.id === id));
 });
 
 app.post('/users/:id', (req, res) => {
-	const { id } = req.params;
-	const { user: updatedUser } = req.body;
+	const {id} = req.params;
+	const {user:updatedUser} = req.body;
 
 	users = users.map(user => user.id === id ? updatedUser : user);
 
@@ -74,11 +74,10 @@ app.get('/products/:id', (req, res) => {
 	res.json(products.find(product => product.id === id));
 });
 
-app.get('/products', (req, res) => {
+app.get('/product', (req, res) => {
 	res.json(products);
 });
 
-app.listen(8080, () => {
-	console.log('Server is listening on port 8080');
-});
-
+app.listen(3001, () => {
+	console.log('Server is listening on port 3001');     
+})
