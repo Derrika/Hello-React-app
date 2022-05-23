@@ -1,15 +1,28 @@
 import React from 'react';
 
+import { ControlledForm } from './controlledComponent/ControlledForm';
+import {UncontrolledForm} from './UncontrolledComponents/UncontrolledForm';
 
-
+import {Flexbox} from './Flexbox';
+import { ModalSpacing } from './Modal';
 
 
 function App() {
 
     return (
-        <>
-         <h1>Hi Dear!!</h1>
-        </>
+      <>
+        <br/>
+        <UncontrolledForm/>
+        <br/><br/>
+        <ControlledForm/>
+
+        <br/> <br />
+
+        <Flexbox />
+
+        <br/> <br />
+        <ModalSpacing/>
+      </>
     );
 
 }
