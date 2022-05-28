@@ -1,33 +1,46 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import { ControlledForm } from './controlledComponent/ControlledForm';
-import {UncontrolledForm} from './UncontrolledComponents/UncontrolledForm';
+//import styled from 'styled-components';
 
-import {Flexbox} from './Flexbox';
-import { ModalSpacing } from './Modal';
+import {ControlledModal} from './controlledComponent/ControlledModal';
 
+/* const buttonStyle = styled.button`
+    padding: 5px;
+    border: 1px solid;
+`;
+
+const aStyle = styled.button`
+    text-align: center;
+    text-decoration: none;
+`;
+
+const h1Style = styled.h1`
+    text-align: center;
+`; */
 
 function App() {
+const [shouldShowModal, setShouldShowModal] = useState(false);
 
-    return (
+  return (
       <>
-        <br/>
-        <UncontrolledForm/>
-        <br/><br/>
-        <ControlledForm/>
+      <br/><br/>
+      <ControlledModal 
+          shouldShow={shouldShowModal}
+          onRequestClose={() => {
+            setShouldShowModal(false);
+          }}
+      >
+          <h1>Welcome Back!! <span role='img' aria-label='smileyface'>😁</span></h1>
+      </ControlledModal>
+      <button onClick={() => setShouldShowModal(!shouldShowModal)}>
+          {shouldShowModal ? 'Hide Modal' : 'Show Modal'}
+      </button>
 
-        <br/> <br />
-
-        <Flexbox />
-
-        <br/> <br />
-        <ModalSpacing/>
       </>
-    );
-
+  )
 }
 
-export default App;
+export default App; 
 
 
 
@@ -111,7 +124,34 @@ export default App; */
 
 
 
+/* import React from 'react';
 
+import { ControlledForm } from './controlledComponent/ControlledForm';
+import {UncontrolledForm} from './UncontrolledComponents/UncontrolledForm';
+
+import {Flexbox} from './Flexbox';
+import { ModalSpacing } from './Modal';
+
+
+function App() {
+
+    return (
+      <>
+        <br/>
+        <UncontrolledForm/>
+        <br/><br/>
+        <ControlledForm/>
+
+        <br/> <br />
+
+        <Flexbox />
+
+        <br/> <br />
+        <ModalSpacing/>
+      </>
+    );
+
+}*/
 
 
 

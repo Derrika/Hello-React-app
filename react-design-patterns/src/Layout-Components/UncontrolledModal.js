@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState }  from 'react';
 
-import { useState } from 'react';
 import styled from 'styled-components';
 
 const ModalBackground = styled.div`
@@ -22,7 +21,7 @@ const ModalBody = styled.div`
 `;
 
 
-export const Modal = ({ children }) => {
+export const UncontrolledModal = ({ children }) => {
     const [shouldShow, setShouldShow] = useState(false);
 
     return (
