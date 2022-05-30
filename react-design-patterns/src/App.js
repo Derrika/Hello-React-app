@@ -3,12 +3,17 @@ import React from 'react';
 //import { printProps } from './Higher-OrderComponent/printProps';
 import { withUser } from './Higher-OrderComponent/withUser';
 import {UserInfo } from './UserInfo';
+import { UserInfoForm } from './Higher-OrderComponent/userInfoForm';
 
 
 const UserInfoWithLoader = withUser(UserInfo, '345');
 function App () {
   return (
+    <>
     <UserInfoWithLoader />
+    <br/><br/>
+    <UserInfoForm />
+    </>
   )
 }
 
