@@ -1,13 +1,14 @@
 import React from 'react';
 
-import { printProps } from './Higher-OrderComponent/printProps';
+//import { printProps } from './Higher-OrderComponent/printProps';
+import { withUser } from './Higher-OrderComponent/withUser';
 import {UserInfo } from './UserInfo';
 
-const UserInfoWrapped = printProps(UserInfo);
 
+const UserInfoWithLoader = withUser(UserInfo, '345');
 function App () {
   return (
-    <UserInfoWrapped a={1} b="Hello" c={{ name: 'Shaun'}} />
+    <UserInfoWithLoader />
   )
 }
 
@@ -33,13 +34,15 @@ export default App;
 
 
 
+/* const UserInfoWrapped = printProps(UserInfo);
 
+function App () {
+  return (
+    <UserInfoWrapped a={1} b="Hello" c={{ name: 'Shaun'}} />
+  )
+}
 
-
-
-
-
-
+export default App; */
 
 
 
@@ -106,35 +109,6 @@ export default App;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* import React, {useState} from 'react';
 
 //import styled from 'styled-components';
@@ -178,39 +152,6 @@ const [shouldShowModal, setShouldShowModal] = useState(false);
 }
 
 export default App;  */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -289,25 +230,6 @@ function App() {
     );
 
 }*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
