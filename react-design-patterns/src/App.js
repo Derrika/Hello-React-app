@@ -1,18 +1,12 @@
 import React from 'react';
 
-//import { printProps } from './Higher-OrderComponent/printProps';
-import { withUser } from './Higher-OrderComponent/withUser';
-import {UserInfo } from './UserInfo';
-import { UserInfoForm } from './Higher-OrderComponent/userInfoForm';
+import {UserInfo} from './UserInfo';
 
 
-const UserInfoWithLoader = withUser(UserInfo, '345');
 function App () {
   return (
     <>
-    <UserInfoWithLoader />
-    <br/><br/>
-    <UserInfoForm />
+      <UserInfo />
     </>
   )
 }
@@ -37,6 +31,36 @@ export default App;
 
 
 
+
+
+
+
+
+
+
+
+
+/* HIGHER ORDER
+ import React from 'react';
+
+//import { printProps } from './Higher-OrderComponent/printProps';
+import { withUser } from './Higher-OrderComponent/withUser';
+import {UserInfo } from './UserInfo';
+import { UserInfoForm } from './Higher-OrderComponent/userInfoForm';
+
+
+const UserInfoWithLoader = withUser(UserInfo, '345');
+function App () {
+  return (
+    <>
+    <UserInfoWithLoader />
+    <br/><br/>
+    <UserInfoForm />
+    </>
+  )
+}
+
+export default App; */
 
 
 /* const UserInfoWrapped = printProps(UserInfo);

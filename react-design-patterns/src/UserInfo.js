@@ -1,12 +1,13 @@
 import React from 'react';
 
+import { UseCurrentUser } from './CustomHooks/useCurrentUser';
 
 
-export const UserInfo = ({ user }) => {
+
+export const UserInfo = () => {
+    const user = UseCurrentUser();
     const {id, name, age, hairColor, hobbies} = user || {};
     
-  
-
     return  user ? (
         <>
          <p>{id}</p>
