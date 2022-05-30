@@ -1,5 +1,49 @@
-import React, {useState} from 'react';
-//import { UncontrolledOnboardFlow } from './UncontrolledComponents/UncontrolledOnboardingFlow';
+import React from 'react';
+
+import { printProps } from './Higher-OrderComponent/printProps';
+import {UserInfo } from './UserInfo';
+
+const UserInfoWrapped = printProps(UserInfo);
+
+function App () {
+  return (
+    <UserInfoWrapped a={1} b="Hello" c={{ name: 'Shaun'}} />
+  )
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* //import { UncontrolledOnboardFlow } from './UncontrolledComponents/UncontrolledOnboardingFlow';
 
 import {ControlledOnboardFlow } from './controlledComponent/ControlledOnboardFlow';
 
@@ -58,7 +102,7 @@ function App() {
 }
 
 export default App;
-
+ */
 
 
 
