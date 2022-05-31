@@ -1,13 +1,27 @@
 import React from 'react';
+import axios from 'axios';
 
 //import { UseCurrentUser } from './CustomHooks/useCurrentUser';
 //import { useUser } from './CustomHooks/useUser';
-import { useResource } from './CustomHooks/useResource';
+//import { useResource } from './CustomHooks/useResource';
+import { useDataSource } from './CustomHooks/useDataSource';
 
+//get data from server 
+const serverResource = resourceUrl => async () => {
+    const response = await axios.get(resourceUrl);
+    return response.data;
+};
 
+const localStorageResource = key => () => {
+    return localStorageResource.getItem(key);
+};
 
 export const UserInfo = ({userId}) => {
-    const user = useResource(`/users/${userId}`);
+    //const user = useResource(`/users/${userId}`);
+
+    const user = useDataSource(serverResource(`/users/${userId}`));
+    const message = useDataSource(localStorageResource('messsage'));
+    console.log(message);
 
     const {id, name, age, hairColor, hobbies} = user || {};
     
