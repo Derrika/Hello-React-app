@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { RecursiveComponent } from './FunctionalProgramming/RecursiveComponent';
-import { DangerButton, SuccessButton } from './FunctionalProgramming/Composition';
+//import { DangerButton, SuccessButton } from './FunctionalProgramming/Composition';
+import { DangerButton, SuccessButton } from './FunctionalProgramming/partiallyApply';
 
 const nestedObject = {
   a: 1,
@@ -33,7 +34,13 @@ function App () {
 
     <br/>
 
-    <RecursiveComponent data={nestedObject}/>
+   /*  <RecursiveComponent data={nestedObject}/>
+    <br/><br/>
+
+    <DangerButton text="Don't do it!" />
+    &nbsp;&nbsp;&nbsp;
+    <SuccessButton text="Yes!!" /> */
+
     <br/><br/>
 
     <DangerButton text="Don't do it!" />
