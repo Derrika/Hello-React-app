@@ -1,15 +1,45 @@
 import React from 'react';
 
-import {UserInfo} from './UserInfo';
-import {ProductInfo} from './ProductInfo';
+import { RecursiveComponent } from './FunctionalProgramming/RecursiveComponent';
+import { DangerButton, SuccessButton } from './FunctionalProgramming/Composition';
 
+const nestedObject = {
+  a: 1,
+  b: {
+    b1: 4,
+    b2: {
+      b23: 'Hello',
+    },
+    b3: {
+      b31: {
+        message: 'Hi',
+      },
+      b32: {
+        message: 'Hi, how are you?',
+      }
+    }
+  },
+  c: {
+    c1: 2,
+    c2: 3,
+  }
+};
 
 function App () {
   return (
     <>
-      <UserInfo userId={"123"}/>
-      <br/>
-      <ProductInfo productId={"1234"}/>
+     
+    <h1>Welcome to Code world!! <span role="img" aria-label="">🙋🏾‍♀️</span></h1>
+
+    <br/>
+
+    <RecursiveComponent data={nestedObject}/>
+    <br/><br/>
+
+    <DangerButton text="Don't do it!" />
+    &nbsp;&nbsp;&nbsp;
+    <SuccessButton text="Yes!!" />
+
     </>
   )
 }
@@ -38,10 +68,21 @@ export default App;
 
 
 
+/* import {UserInfo} from './UserInfo';
+import {ProductInfo} from './ProductInfo';
 
 
+function App () {
+  return (
+    <>
+      <UserInfo userId={"123"}/>
+      <br/>
+      <ProductInfo productId={"1234"}/>
+    </>
+  )
+}
 
-
+export default App; */
 
 /* HIGHER ORDER
  import React from 'react';
