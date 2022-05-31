@@ -1,12 +1,15 @@
 import React from 'react';
 
 import {UserInfo} from './UserInfo';
+import {ProductInfo} from './ProductInfo';
 
 
 function App () {
   return (
     <>
-      <UserInfo />
+      <UserInfo userId={"123"}/>
+      <br/>
+      <ProductInfo productId={"1234"}/>
     </>
   )
 }
